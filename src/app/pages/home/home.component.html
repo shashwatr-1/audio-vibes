@@ -1,7 +1,10 @@
 <section class="slideshow-section">
     <ngx-slick-carousel class="slideshow" [config]="slideConfig">
-      <div ngxSlickItem *ngFor="let img of images" class="slide">
-        <img [src]="img" alt="Slideshow image" />
+      <div ngxSlickItem *ngFor="let img of images; let i = index as i" class="slide">
+       <div class="image-wrapper">
+          <img [src]="img" alt="Slideshow image" />
+          <img [src]="i < images.length - 1 ? images[i + 1] : images[0]" alt="Hover image" class="hover-image" />
+        </div>
       </div>
     </ngx-slick-carousel>
   </section>

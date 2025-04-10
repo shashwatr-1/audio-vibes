@@ -1,0 +1,83 @@
+scss
+.mini-player {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  .track-info {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 14px;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:first-child {
+        font-weight: bold;
+      }
+
+      &:last-child {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      color: #fff;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .play-pause-button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .open-full-player-button {
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+}

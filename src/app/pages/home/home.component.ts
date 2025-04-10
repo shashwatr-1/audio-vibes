@@ -35,9 +35,17 @@ export class HomeComponent  {
   
   
 
-  audioFiles = [
-    { title: 'Lo-fi Chill', src: 'assets/videos/u.mp3' },
-    { title: 'Ambient Dream', src: 'assets/videos/u.mp3' }
-  ];
+    audioFiles = [
+      { title: 'Lo-fi Chill', src: 'assets/videos/u.mp3' },
+      { title: 'Ambient Dream', src: 'assets/videos/u.mp3' },
+      { title: 'Relaxing Beats', src: 'assets/videos/u.mp3' },
+      { title: 'Smooth Jazz', src: 'assets/videos/u.mp3' },
+      { title: 'Mellow Mood', src: 'assets/videos/u.mp3' },
+      { title: 'Tranquil Escape', src: 'assets/videos/u.mp3' },
+      { title: 'Chillhop Vibes', src: 'assets/videos/u.mp3' },
+      { title: 'Dreamy Atmosphere', src: 'assets/videos/u.mp3' },
+      { title: 'Soothing Textures', src: 'assets/videos/u.mp3' },
+      { title: 'Serene Flow', src: 'assets/videos/u.mp3' }
+    ];
 
 }

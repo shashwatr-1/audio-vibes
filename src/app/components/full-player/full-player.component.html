@@ -1,0 +1,31 @@
+<div class="full-player">
+  <div class="track-info">
+    <h2 class="title">{{ track?.title || 'Track Title' }}</h2>
+    <p class="artist">{{ track?.artist || 'Artist Name' }}</p>
+  </div>
+
+  <div class="timeline">
+    <input type="range" min="0" max="100" value="0" class="timeline-slider">
+    <span class="current-time">0:00</span> / <span class="total-time">3:30</span>
+  </div>
+
+  <div class="volume">
+    <input type="range" min="0" max="100" value="50" class="volume-slider">
+  </div>
+
+  <div class="controls">
+    <button class="skip-backward" (click)="skipBackward()">-10s</button>
+    <button class="play-pause" (click)="togglePlay()">
+      <i class="fas" [ngClass]="{'fa-play': !isPlaying, 'fa-pause': isPlaying}"></i>
+    </button>
+    <button class="skip-forward" (click)="skipForward()">+10s</button>
+  </div>
+
+  <div class="visualization">
+    <!-- Waveform or equalizer will be rendered here -->
+  </div>
+
+  <button class="close-button" (click)="close()">
+    <i class="fas fa-times"></i>
+  </button>
+</div>
