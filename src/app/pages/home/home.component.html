@@ -1,0 +1,26 @@
+<section class="slideshow-section">
+    <ngx-slick-carousel class="slideshow" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let img of images" class="slide">
+        <img [src]="img" alt="Slideshow image" />
+      </div>
+    </ngx-slick-carousel>
+  </section>
+  
+  <section class="section section-audio">
+    <h2>🎧 SHIVAM KI रोमांचक कहानी</h2>
+    <div class="audio-bars-scroll">
+      <div
+        class="audio-bar-wrapper"
+        *ngFor="let audio of audioFiles"
+      >
+        <app-audio-bar [audio]="audio"  [title]="audio.title"></app-audio-bar>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section section-thankyou">
+    <h2>Thanks for Listening 🎶</h2>
+    <img src="assets/images/final.jpg" alt="Thank You" />
+  </section>
+  

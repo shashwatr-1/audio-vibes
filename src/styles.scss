@@ -1,0 +1,23 @@
+:root {
+    --primary-bg: #ffffff;
+    --primary-text: #000000;
+    --accent-color: #3f51b5;
+  }
+  
+  .dark-theme {
+    --primary-bg: #121212;
+    --primary-text: #ffffff;
+    --accent-color: #bb86fc;
+  }
+  
+  body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .mat-toolbar {
+    background-color: var(--accent-color) !important;
+    color: var(--primary-text) !important;
+  }
+  

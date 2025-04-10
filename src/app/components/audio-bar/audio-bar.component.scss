@@ -1,0 +1,40 @@
+.audio-bar-container {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 12px;
+    margin: 1rem 0;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  
+    .waveform {
+      margin-bottom: 1rem;
+    }
+  
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+  
+      button,
+      input[type='range'],
+      a {
+        background: #333;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+  
+      input[type='range'] {
+        width: 150px;
+      }
+  
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  
