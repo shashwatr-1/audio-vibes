@@ -70,6 +70,16 @@ interface AudioFile {
       overflow-x: hidden;
       width: 100%;
       max-width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
     }
 
     .navbar {
@@ -84,6 +94,8 @@ interface AudioFile {
       color: #333;
       height: auto;
       min-height: 64px;
+      width: 100%;
+      margin: 0;
 
       &.dark-theme {
         background-color: #1a1a1a;
@@ -176,15 +188,7 @@ interface AudioFile {
     .dark-theme {
       --bg-color: #121212;
       --text-color: #ffffff;
-      .search-input {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-
-        &:focus {
-          background: rgba(255, 255, 255, 0.15);
-          border-color: rgba(255, 255, 255, 0.3);
-        }
-      }
+      background-color: #121212;
     }
 
     :host(:not(.dark-theme)) {
@@ -193,9 +197,24 @@ interface AudioFile {
     }
 
     @media (max-width: 768px) {
+      :host {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+
       .navbar {
+        width: 100%;
         padding: 0.5rem;
-        height: auto;
+        margin: 0;
+      }
+
+      .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
       }
 
       .navbar-content {
