@@ -1,27 +1,38 @@
-# AudioVibes
+# Audio Vibes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.15.
+**Audio Vibes** is a sleek, responsive web app built with **Angular** and **Angular Material** to deliver immersive music experiences. Designed for both desktop and mobile, Audio Vibes adapts seamlessly with a modern UI and intuitive interactions.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Responsive Angular Material `mat-toolbar`
+- Mobile-first design
+- Audio playback integration
+- Dynamic theming support
+- Modular components for easy scaling
 
-## Code scaffolding
+## Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Live Demo](https://your-demo-link.com) — *Coming Soon*
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [Flex Layout](https://github.com/angular/flex-layout)
+- HTML5 Audio API
+- SCSS for custom styling
 
-## Running unit tests
+## Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Prerequisites
 
-## Running end-to-end tests
+- Node.js & npm
+- Angular CLI (`npm install -g @angular/cli`)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Installation
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+git clone https://github.com/your-username/audio-vibes.git
+cd audio-vibes
+npm install
+ng serve
