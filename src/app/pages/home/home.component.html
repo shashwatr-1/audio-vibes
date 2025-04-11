@@ -1,29 +1,32 @@
 <section class="slideshow-section">
-    <ngx-slick-carousel class="slideshow" [config]="slideConfig">
-      <div ngxSlickItem *ngFor="let img of images; let i = index as i" class="slide">
-       <div class="image-wrapper">
-          <img [src]="img" alt="Slideshow image" />
-          <img [src]="i < images.length - 1 ? images[i + 1] : images[0]" alt="Hover image" class="hover-image" />
-        </div>
-      </div>
-    </ngx-slick-carousel>
-  </section>
-  
-  <section class="section section-audio">
-    <h2>🎧 SHIVAM KI रोमांचक कहानी</h2>
-    <div class="audio-bars-scroll">
-      <div
-        class="audio-bar-wrapper"
-        *ngFor="let audio of audioFiles"
-      >
-        <app-audio-bar [audio]="audio"  [title]="audio.title"></app-audio-bar>
+  <ngx-slick-carousel class="slideshow" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let img of images" class="slide">
+      <div class="image-wrapper">
+        <img [src]="img" alt="Slideshow image" />
       </div>
     </div>
-  </section>
-  
+  </ngx-slick-carousel>
+</section>
 
-  <section class="section section-thankyou">
-    <h2>Thanks for Listening 🎶</h2>
-    <img src="assets/images/final.jpg" alt="Thank You" />
-  </section>
+<section class="section section-audio">
+  <h2>🎧 SHIVAM KI रोमांचक कहानी</h2>
+  <div class="audio-bars-scroll">
+    <div
+      class="audio-bar-wrapper"
+      *ngFor="let audio of audioFiles"
+    >
+      <app-audio-bar [audio]="audio" [title]="audio.title"></app-audio-bar>
+    </div>
+  </div>
+</section>
+
+<section class="section section-thankyou">
+  <h2>Thanks for Listening 🎶</h2>
+  <app-ratings></app-ratings>
+  <img src="assets/images/final.jpg" alt="Thank You" />
+</section>
+
+<section class="section section-comments">
+  <app-comment-section></app-comment-section>
+</section>
   

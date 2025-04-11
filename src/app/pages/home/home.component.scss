@@ -3,12 +3,16 @@
     background-color: var(--primary-bg);
     color: var(--primary-text);
     transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
   
   .section {
     width: 100%;
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
   
   .section-gallery {
@@ -72,10 +76,6 @@
       max-width: 400px;
       margin-top: 2rem;
       border-radius: 12px;
-  
-      &.fade-out {
-        opacity: 0;
-      }
     }
   }
   
@@ -91,27 +91,99 @@
     width: 100%;
     height: 100%;
 
-.slide {
-  position: relative;
-  text-align: center;
-  /* Center the image wrapper */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    .slide {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-wrapper {
+      width: 500px;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 12px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+.section-comments {
+  background: var(--primary-bg);
+  padding: 3rem 1rem;
+  margin-top: 2rem;
 }
 
-.image-wrapper {
-  width: 500px; /* Adjust as needed */
-  height: 350px; /* Adjust as needed */
-  overflow: hidden;
-  border-radius: 12px;
-  position: relative;
+// Responsive breakpoints
+@media (max-width: 768px) {
+  .section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .section-gallery {
+    height: auto;
+    min-height: 60vh;
+    padding: 1rem;
+
+    .slideshow {
+      height: auto;
+      max-width: 100%;
+
+      img {
+        height: auto;
+        max-height: 60vh;
+      }
+    }
+  }
+
+  .image-wrapper {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 60vh;
+  }
+
+  .section-audio {
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .section-comments {
+    padding: 2rem 0.75rem;
+  }
 }
 
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+@media (max-width: 480px) {
+  .section {
+    padding: 1rem 0.5rem;
+  }
+
+  .section-gallery {
+    min-height: 40vh;
+    padding: 0.5rem;
+
+    .slideshow img {
+      max-height: 40vh;
+    }
+  }
+
+  .section-audio {
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .section-comments {
+    padding: 1.5rem 0.5rem;
+  }
 }
   
