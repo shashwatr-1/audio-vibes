@@ -19,9 +19,9 @@ import { CommonModule } from '@angular/common';
               <span class="star">★</span>
               <span class="star">★</span>
               <span class="star">★</span>
-              <span class="star half">★</span>
+              <span class="star empty">★</span>
             </div>
-            <span class="rating-value">4.5/5</span>
+            <p class="rating-comment">"Lund Touching audio"</p>
           </div>
         </div>
 
@@ -37,7 +37,7 @@ import { CommonModule } from '@angular/common';
               <span class="star">★</span>
               <span class="star">★</span>
             </div>
-            <span class="rating-value">5/5</span>
+            <p class="rating-comment">"A sonic jolt that grabs your soul"</p>
           </div>
         </div>
 
@@ -53,7 +53,7 @@ import { CommonModule } from '@angular/common';
               <span class="star">★</span>
               <span class="star">★</span>
             </div>
-            <span class="rating-value">5/5</span>
+            <p class="rating-comment">"Shivam sax sux audio is a masterpiece, a wild ride that shakes senses silly"</p>
           </div>
         </div>
       </div>
@@ -149,36 +149,28 @@ import { CommonModule } from '@angular/common';
 
     .stars {
       display: flex;
-      gap: 0.25rem;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .star {
       color: #ffd700;
-      font-size: 1.2rem;
-      text-shadow: 0 0 2px rgba(0,0,0,0.3);
+      font-size: 1.8rem;
+      text-shadow: 0 0 4px rgba(0,0,0,0.3);
+      line-height: 1;
 
-      &.half {
-        position: relative;
-        overflow: hidden;
-        width: 1.2rem;
-
-        &::after {
-          content: '★';
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 50%;
-          overflow: hidden;
-          color: #ffd700;
-        }
+      &.empty {
+        color: rgba(255, 215, 0, 0.3);
       }
     }
 
-    .rating-value {
-      font-size: 1rem;
+    .rating-comment {
+      font-size: 0.9rem;
       color: var(--text-color);
-      opacity: 0.9;
-      font-weight: 500;
+      opacity: 0.8;
+      font-style: italic;
+      line-height: 1.4;
+      margin: 0;
     }
 
     @media (max-width: 768px) {
@@ -205,7 +197,11 @@ import { CommonModule } from '@angular/common';
       }
 
       .star {
-        font-size: 1.1rem;
+        font-size: 1.6rem;
+      }
+
+      .rating-comment {
+        font-size: 0.85rem;
       }
     }
 
@@ -243,7 +239,11 @@ import { CommonModule } from '@angular/common';
       }
 
       .star {
-        font-size: 1rem;
+        font-size: 1.4rem;
+      }
+
+      .rating-comment {
+        font-size: 0.8rem;
       }
     }
   `]
