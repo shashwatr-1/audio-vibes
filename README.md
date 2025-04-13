@@ -11,8 +11,7 @@
 - Modular components for easy scaling
 
 ## Demo
-
-[Live Demo](https://your-demo-link.com) — *Coming Soon*
+-live Demo [https://audio-vibes.vercel.app]
 
 ## Technologies Used
 
